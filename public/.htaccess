@@ -1,0 +1,23 @@
+# Use PHP5.4 Single php.ini as default
+AddHandler application/x-httpd-php54s .php
+
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    RewriteEngine On
+
+    # Redirect Trailing Slashes...
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+AuthType Basic
+AuthName "www root"
+AuthUserFile "/home6/eigbyone/.htpasswds/public_html/passwd"
+require valid-user

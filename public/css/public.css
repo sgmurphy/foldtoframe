@@ -1,0 +1,14 @@
+body {
+	padding-top: 70px;
+	padding-bottom: 2em;
+}
+
+.preview {
+	background: url('/img/fold-to-frame-portrait-layout.png') no-repeat top left;
+	background-size: 100% auto;
+	margin-top: 1em;
+}
+
+.preview img {
+	max-width: 100%;
+}
